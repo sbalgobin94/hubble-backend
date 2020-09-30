@@ -7,6 +7,7 @@ class Api::V1::PostsController < ApplicationController
     
       def create
         @post = Post.create(post_params)
+        byebug
         render json: @post, status: 201
       end
     
@@ -26,7 +27,7 @@ class Api::V1::PostsController < ApplicationController
     
       private
         def post_params
-          params.require(:post).permit(:body)
+          params.require(:post).permit(:title, :description, :image_url, :user_id)
         end
 
 end
