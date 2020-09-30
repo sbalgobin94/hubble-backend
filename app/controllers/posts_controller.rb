@@ -1,4 +1,4 @@
-class Api::V1::PostsController < ApplicationController
+class PostsController < ApplicationController
 
     def index
         @posts = Post.all
@@ -7,7 +7,6 @@ class Api::V1::PostsController < ApplicationController
     
       def create
         @post = Post.create(post_params)
-        byebug
         render json: @post, status: 201
       end
     
