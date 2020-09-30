@@ -7,14 +7,13 @@ class PostsController < ApplicationController
     
       def create
         @post = Post.create(post_params)
-        render json: @post, status: 201
+        render json: @post
       end
     
       def destroy
-        post = Post.find(params[:id])
-        if post.destroy
-          render json: {postId: post.id}, status: 200
-        end
+        @post = Post.find_by(id: params[:id])
+        @post.destroy
+        render json: { message: "Post deleted!" }
       end
     
       def update
@@ -26,7 +25,7 @@ class PostsController < ApplicationController
     
       private
         def post_params
-          params.require(:post).permit(:title, :description, :image_url, :user_id)
+          params.require(:post).permit(:title, :description, :image_url)
         end
 
 end
