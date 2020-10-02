@@ -13,6 +13,7 @@ Post.reset_pk_sequence
 
 sam = User.create(username: 'sbalgobin')
 josh = User.create(username: 'jitwaru')
+anon = User.create(username: 'anon')
 
 post1 = Post.create(title: "Check out this movie!", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit unde repellendus obcaecati tenetur fugit. Numquam necessitatibus iure molestias, dicta ex nisi ab commodi nostrum ipsa maiores accusamus sunt fugiat labore.", image_url: 'https://2.bp.blogspot.com/-pZbds_1JocY/U4l6vAtDA5I/AAAAAAAALU0/PWE5TJEhWds/s1600/sunshine_ver4_xlg.jpg', user_id: sam.id, likes: 0)
 
