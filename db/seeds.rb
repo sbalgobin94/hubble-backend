@@ -20,4 +20,10 @@ post2 = Post.create(title: "Mars Rover Update", description: "Lorem ipsum dolor 
 
 post3 = Post.create(title: "Journey to Mars", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit unde repellendus obcaecati tenetur fugit. Numquam necessitatibus iure molestias, dicta ex nisi ab commodi nostrum ipsa maiores accusamus sunt fugiat labore.", image_url: 'https://spacenews.com/wp-content/uploads/2015/10/journey_to_mars-879x485.jpg', user_id: josh.id, likes: 0)
 
+comment1 = Comment.create(post_id: post1.id, content: "I loved this movie too. Cillian Murphy was A+.", user_id: 1)
+comment2 = Comment.create(post_id: post1.id, content: "Third act was interesting.", user_id: 1)
+comment3 = Comment.create(post_id: post2.id, content: "Thanks for the update!", user_id: 2)
+comment4 = Comment.create(post_id: post3.id, content: "Wish I could leave this planet already.", user_id: 2)
+
+
 puts "Done Seeding"

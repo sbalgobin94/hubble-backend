@@ -21,6 +21,9 @@ class PostsController < ApplicationController
         if @post.update(post_params)
           render json: @post, status: 200
         end
+
+        
+
       end
     
       private
